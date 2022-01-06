@@ -96,5 +96,8 @@
     "tslint": "~6.1.0",
     "tslint-language-service": "^0.9.9",
     "typescript": "3.9.7"
+  },
+  "publishConfig": {
+    "directory": "dist"
   }
 }
