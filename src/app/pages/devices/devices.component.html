@@ -1,0 +1,5 @@
+<div class="row">
+  <ng-container *ngFor="let device of deviceService.devices$ | async">
+    <ngx-light-device [device]="device | async"></ngx-light-device>
+  </ng-container>
+</div>

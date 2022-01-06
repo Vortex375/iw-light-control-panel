@@ -1,0 +1,8 @@
+<ng-container *ngIf="device">
+  <nb-card>
+    <nb-card-header>{{device.$name}}</nb-card-header>
+    <nb-card-body>
+      <nb-toggle [checked]="device.state === 'ON'" (checkedChange)="toggle(device.state !== 'ON')"></nb-toggle>
+    </nb-card-body>
+  </nb-card>
+</ng-container>

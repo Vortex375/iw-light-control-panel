@@ -55,3 +55,7 @@ import 'core-js/es7/object';
 if (typeof SVGElement.prototype.contains === 'undefined') {
   SVGElement.prototype.contains = HTMLDivElement.prototype.contains;
 }
+
+// required to get deepstream-client to work
+(window as any).global = window;
+global.Buffer = global.Buffer || require('buffer').Buffer;
