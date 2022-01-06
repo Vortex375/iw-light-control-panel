@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { NbCardModule, NbToggleModule } from '@nebular/theme';
+import { NbCardModule, NbIconModule, NbRadioModule, NbToggleModule } from '@nebular/theme';
+import { MatSliderModule } from '@angular/material/slider';
 import { ThemeModule } from 'app/@theme/theme.module';
 import { LightDeviceComponent } from './light-device.component';
 
@@ -9,7 +10,10 @@ import { LightDeviceComponent } from './light-device.component';
   ],
   imports: [
     NbCardModule,
+    NbIconModule,
+    NbRadioModule,
     NbToggleModule,
+    MatSliderModule,
     ThemeModule,
   ],
   exports: [

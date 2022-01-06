@@ -2,7 +2,18 @@
   <nb-card>
     <nb-card-header>{{device.$name}}</nb-card-header>
     <nb-card-body>
-      <nb-toggle [checked]="device.state === 'ON'" (checkedChange)="toggle(device.state !== 'ON')"></nb-toggle>
+      <form>
+        <div class="row">
+          <div class="col-sm-4"><nb-toggle [checked]="device.state === 'ON'" (checkedChange)="toggle(device.state !== 'ON')"></nb-toggle></div>
+          <div class="col-sm-8"><mat-slider min="0" max="254" thumbLabel tickInterval="1" [value]="device.brightness" (input)="changeBrightness($event)" style="display: block"></mat-slider></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2"><nb-radio [checked]="colorTempModeEnabled"></nb-radio></div>
+          <div class="col-sm-2"><nb-icon icon="thermometer-outline"></nb-icon></div>
+          <!-- <div class="col-sm-10"><input class="input-full-width" type="number" style="padding: 0; width: 100%"></div> -->
+          <div class="col-sm-8"><mat-slider min="1" max="500" thumbLabel tickInterval="1" [value]="device.color_temp" (input)="changeColorTemp($event)" style="display: block"></mat-slider></div>
+        </div>
+      </form>
     </nb-card-body>
   </nb-card>
 </ng-container>
