@@ -4,12 +4,14 @@ import { MatSliderModule } from '@angular/material/slider';
 import { ThemeModule } from 'app/@theme/theme.module';
 import { LightDeviceComponent } from './light-device.component';
 import { NgxColorsModule } from 'ngx-colors';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     LightDeviceComponent,
   ],
   imports: [
+    FormsModule,
     NbCardModule,
     NbIconModule,
     NbRadioModule,

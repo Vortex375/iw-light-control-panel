@@ -13,7 +13,7 @@ import { ScenesModule } from './scenes/scenes.module';
     ThemeModule,
     NbMenuModule,
     DevicesModule,
-    ScenesModule
+    ScenesModule,
   ],
   declarations: [
     PagesComponent,

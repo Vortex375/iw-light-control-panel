@@ -1,9 +1,9 @@
-import { NgModule } from "@angular/core";
-import { LightDeviceService } from "./light-device.service";
+import { NgModule } from '@angular/core';
+import { LightDeviceService } from './light-device.service';
 
 @NgModule({
   providers: [
-    LightDeviceService
-  ]
+    LightDeviceService,
+  ],
 })
-export class ServicesModule{}
+export class ServicesModule {}
