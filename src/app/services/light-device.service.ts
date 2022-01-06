@@ -18,7 +18,7 @@ export class LightDeviceService implements OnDestroy {
   private readonly devices: BehaviorSubject<Array<Observable<any>>> = new BehaviorSubject([]);
 
   constructor() {
-    const hostname = 'raspberrypi.local';
+    const hostname = '192.168.1.230';
     this.ds = new DeepstreamClient(hostname + ':6020');
     this.ds.login().then(() => this.subscribeToListOfDevices());
   }
