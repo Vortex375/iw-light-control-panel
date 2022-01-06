@@ -11,7 +11,12 @@
           <div class="col-sm-2"><nb-radio [checked]="colorTempModeEnabled"></nb-radio></div>
           <div class="col-sm-2"><nb-icon icon="thermometer-outline"></nb-icon></div>
           <!-- <div class="col-sm-10"><input class="input-full-width" type="number" style="padding: 0; width: 100%"></div> -->
-          <div class="col-sm-8"><mat-slider min="1" max="500" thumbLabel tickInterval="1" [value]="device.color_temp" (input)="changeColorTemp($event)" style="display: block"></mat-slider></div>
+          <div class="col-sm-8"><mat-slider min="1" max="500" thumbLabel tickInterval="1" [(value)]="selectedColorTemp" (input)="changeColorTemp($event)" (change)="updateValuesFromDevice()" style="display: block"></mat-slider></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2"><nb-radio [checked]="colorModeEnabled"></nb-radio></div>
+          <div class="col-sm-2"><nb-icon icon="color-palette-outline"></nb-icon></div>
+          <div class="col-sm-8"><ngx-colors ngx-colors-trigger [(ngModel)]="selectedColor" (change)="changeColor()"></ngx-colors></div>
         </div>
       </form>
     </nb-card-body>

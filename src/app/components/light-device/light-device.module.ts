@@ -3,6 +3,7 @@ import { NbCardModule, NbIconModule, NbRadioModule, NbToggleModule } from '@nebu
 import { MatSliderModule } from '@angular/material/slider';
 import { ThemeModule } from 'app/@theme/theme.module';
 import { LightDeviceComponent } from './light-device.component';
+import { NgxColorsModule } from 'ngx-colors';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { LightDeviceComponent } from './light-device.component';
     NbIconModule,
     NbRadioModule,
     NbToggleModule,
+    NgxColorsModule,
     MatSliderModule,
     ThemeModule,
   ],
