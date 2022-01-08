@@ -71,7 +71,7 @@ export class LightDeviceService implements OnDestroy {
       }
     }
 
-    this.devices.next(sortBy(deviceNames).map(deviceName => this.makeRecordObservable(deviceName, this.records.get(deviceName))));
+    this.devices.next(sortBy([...this.records.keys()]).map(deviceName => this.makeRecordObservable(deviceName, this.records.get(deviceName))));
   }
 
   private makeRecordObservable(deviceName: string, record: Record) {
