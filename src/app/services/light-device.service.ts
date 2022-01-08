@@ -51,9 +51,13 @@ export class LightDeviceService implements OnDestroy {
     await record.whenReady();
 
     for (const key of Object.keys(state)) {
-      record.set(key, state[key]);
+      record.set(key, state[key], (err) => {
+        if (err) {
+          console.error('failed to update record for', deviceName, err);
+        }
+        record.discard();
+      });
     }
-    record.discard();
   }
 
   private updateDevices(deviceNames: string[]) {
